@@ -10,7 +10,7 @@ const cairo = Cairo({
 });
 
 export const metadata = {
-  title: `${siteConfig.name} | توريدات صناعية وحلول لوجستية`,
+  title: `${siteConfig.name} | وصف موجز لنشاط الشركة`,
   description: siteConfig.description,
 };
 
