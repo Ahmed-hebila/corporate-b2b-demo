@@ -2,6 +2,7 @@ import { Cairo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { siteConfig } from "@/config/site";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -9,8 +10,8 @@ const cairo = Cairo({
 });
 
 export const metadata = {
-  title: "Corporate Logistics | توريدات صناعية وحلول لوجستية",
-  description: "شركة رائدة في تقديم التوريدات الصناعية والحلول اللوجستية المتكاملة.",
+  title: `${siteConfig.name} | توريدات صناعية وحلول لوجستية`,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({ children }) {

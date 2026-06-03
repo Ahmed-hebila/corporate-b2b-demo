@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 const navigation = [
   { name: "الرئيسية", href: "/" },
@@ -19,12 +20,12 @@ export default function Header() {
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">اسم الشركة</span>
+            <span className="sr-only">{siteConfig.name}</span>
             <div className="h-8 w-auto text-2xl font-bold text-white flex items-center gap-2">
               <div className="w-8 h-8 bg-amber-500 rounded flex items-center justify-center">
-                <span className="text-slate-900 text-lg">C</span>
+                <span className="text-slate-900 text-lg">{siteConfig.logoLetter}</span>
               </div>
-              <span>Corporate</span>
+              <span>{siteConfig.nameShort}</span>
             </div>
           </Link>
         </div>
@@ -67,8 +68,13 @@ export default function Header() {
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">اسم الشركة</span>
-                <div className="text-xl font-bold text-white">Corporate</div>
+                <span className="sr-only">{siteConfig.name}</span>
+                <div className="h-8 w-auto text-2xl font-bold text-white flex items-center gap-2">
+                  <div className="w-8 h-8 bg-amber-500 rounded flex items-center justify-center">
+                    <span className="text-slate-900 text-lg">{siteConfig.logoLetter}</span>
+                  </div>
+                  <span>{siteConfig.nameShort}</span>
+                </div>
               </Link>
               <button
                 type="button"
