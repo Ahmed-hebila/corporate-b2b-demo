@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Corporate B2B Website Template (Arabic, RTL)
 
-## Getting Started
+A ready-to-brand corporate website for B2B companies, in Arabic and right-to-left. Every page uses placeholder text, so a new client site only needs its name, colours and copy. Built with Next.js and Tailwind CSS and exported as a static site on GitHub Pages.
 
-First, run the development server:
+**Live demo:** https://ahmed-hebila.github.io/corporate-b2b-demo/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222?logo=githubpages&logoColor=white)
+
+| Desktop | Mobile |
+| --- | --- |
+| ![Desktop](docs/screenshot-desktop.png) | <img src="docs/screenshot-mobile.png" width="260" alt="Mobile"> |
+
+## Pages
+
+- **Home** — hero with a call to action and a features / services section
+- **About** (`/about`) — company story, vision, mission and values
+- **Services** (`/services`) — service cards with details
+- **Partners** (`/partners`) — success partners and a “become a partner” call to action
+- **Request a quote** (`/quote`) — quote form for B2B leads
+- **Contact** (`/contact`) — contact form, emails, phones and a Google Map
+
+## Highlights
+
+- Arabic RTL layout with a sticky header, mobile menu and footer
+- One config file for the company details: `src/config/site.js` (name, logo letter, description, emails, phones, address, map, social links)
+- Contact and quote forms with required fields and sending / success states, ready to connect to an API or email service
+- Static export (`output: 'export'`) deployed by a GitHub Actions workflow to GitHub Pages
+
+## Project structure
+
+```
+src/
+├── app/
+│   ├── page.js                 # home
+│   ├── about/  services/  partners/
+│   ├── quote/QuoteForm.js      # quote request form
+│   └── contact/ContactForm.js  # contact form
+├── components/layout/          # Header, Footer
+└── config/site.js              # company details used across the site
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run locally
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open http://localhost:3000. `npm run build` creates the static site in `out/`.
 
-## Learn More
+## Make it yours
 
-To learn more about Next.js, take a look at the following resources:
+1. Edit `src/config/site.js` with the company's details.
+2. Replace the placeholder text in the pages under `src/app/`.
+3. Change the accent colour in the Tailwind classes (amber by default).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Ahmed Hebila** — Flutter & Node.js developer
+[Portfolio](https://ahmedhebila.vercel.app) · [LinkedIn](https://www.linkedin.com/in/ahmed-hebila) · [GitHub](https://github.com/Ahmed-hebila)
